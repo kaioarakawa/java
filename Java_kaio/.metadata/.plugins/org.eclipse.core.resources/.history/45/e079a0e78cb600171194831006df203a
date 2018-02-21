@@ -1,0 +1,214 @@
+
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JCheckBox;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JToggleButton;
+import javax.swing.JTextArea;
+import javax.swing.JSpinner;
+import javax.swing.JList;
+import javax.swing.JProgressBar;
+import javax.swing.JSeparator;
+import javax.swing.JSlider;
+import javax.swing.event.PopupMenuListener;
+import javax.swing.event.PopupMenuEvent;
+
+public class Calculadora extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField tfNum1;
+	private JTextField tfNum2;
+	private JTextField tfResultado;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+	JRadioButton rbAdicao = new JRadioButton("Adi\u00E7\u00E3o");
+	JRadioButton rbSubt = new JRadioButton("Subtra\u00E7\u00E3o");
+	JRadioButton rbMult = new JRadioButton("Multiplica\u00E7\u00E3o");
+	JRadioButton rbDiv = new JRadioButton("Divis\u00E3o");
+	
+	
+	CalculadoraMetodos cm = new CalculadoraMetodos();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Calculadora frame = new Calculadora();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Calculadora() {
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 222, 344);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Calculadora");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblNewLabel.setBounds(64, 11, 130, 14);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("N\u00FAmero 1");
+		lblNewLabel_1.setBounds(10, 43, 86, 14);
+		contentPane.add(lblNewLabel_1);
+		
+		tfNum1 = new JTextField();
+		tfNum1.setBounds(74, 40, 86, 20);
+		contentPane.add(tfNum1);
+		tfNum1.setColumns(10);
+		
+		JLabel lblNmero = new JLabel("N\u00FAmero 2");
+		lblNmero.setBounds(10, 74, 86, 14);
+		contentPane.add(lblNmero);
+		
+		tfNum2 = new JTextField();
+		tfNum2.setColumns(10);
+		tfNum2.setBounds(74, 71, 86, 20);
+		contentPane.add(tfNum2);
+		
+		JComboBox cbOperacao = new JComboBox();
+		cbOperacao.addPopupMenuListener(new PopupMenuListener() {
+			public void popupMenuCanceled(PopupMenuEvent arg0) {
+			}
+			public void popupMenuWillBecomeInvisible(PopupMenuEvent arg0) {
+				double num1;
+				double num2;
+				double resul=0;
+				
+				num1 = Double.parseDouble(tfNum1.getText());
+				num2 = Double.parseDouble(tfNum2.getText());
+				
+				cm.setNumero1(num1);
+				cm.setNumero2(num2);
+				
+				
+				if (cbOperacao.getSelectedIndex()==1){
+					resul = cm.soma();
+				}else if (cbOperacao.getSelectedIndex()==2){
+					resul = cm.subtracao();
+				}else if (cbOperacao.getSelectedIndex()==3){
+					resul = cm.multiplicacao();
+				}else if (cbOperacao.getSelectedIndex()==4){
+					resul = cm.divisao();
+				}else{
+					JOptionPane.showMessageDialog(null, "Operação não selecionada!");
+				}
+				
+				tfResultado.setText(""+resul);
+				
+			}
+			public void popupMenuWillBecomeVisible(PopupMenuEvent arg0) {
+			}
+		});
+		cbOperacao.setModel(new DefaultComboBoxModel(new String[] {"Selecione...", "Adi\u00E7\u00E3o", "Subtra\u00E7\u00E3o", "Multiplica\u00E7\u00E3o", "Divis\u00E3o"}));
+		cbOperacao.setBounds(32, 99, 104, 20);
+		contentPane.add(cbOperacao);
+		
+		JButton btnNewButton = new JButton("Calcular");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+//				double num1;
+//				double num2;
+//				double resul=0;
+//				
+//				num1 = Double.parseDouble(tfNum1.getText());
+//				num2 = Double.parseDouble(tfNum2.getText());
+				
+				
+//				if (cbOperacao.getSelectedIndex()==1){
+//					resul = num1 + num2;
+//				}else if (cbOperacao.getSelectedIndex()==2){
+//					resul = num1 - num2;
+//				}else if (cbOperacao.getSelectedIndex()==3){
+//					resul = num1 * num2;
+//				}else if (cbOperacao.getSelectedIndex()==4){
+//					resul = num1 / num2;
+//				}else{
+//					JOptionPane.showMessageDialog(null, "Operação não selecionada!");
+//				}
+				
+//				if (rbAdicao.isSelected()){
+//					resul = num1 + num2;
+//				}else if (rbSubt.isSelected()){
+//					resul = num1 - num2;
+//				}else if (rbMult.isSelected()){
+//					resul = num1 * num2;
+//				}else if (rbDiv.isSelected()){
+//					resul = num1 / num2;
+//				}
+				
+//				tfResultado.setText(""+resul);
+			}
+		});
+		btnNewButton.setBounds(35, 245, 89, 23);
+		contentPane.add(btnNewButton);
+		
+		JLabel lblResultado = new JLabel("Resultado");
+		lblResultado.setBounds(10, 279, 86, 14);
+		contentPane.add(lblResultado);
+		
+		tfResultado = new JTextField();
+		tfResultado.setColumns(10);
+		tfResultado.setBounds(74, 276, 86, 20);
+		contentPane.add(tfResultado);
+		
+		buttonGroup.add(rbAdicao);
+		rbAdicao.setSelected(true);
+		rbAdicao.setBounds(27, 126, 109, 23);
+		contentPane.add(rbAdicao);
+		
+		buttonGroup.add(rbSubt);
+		rbSubt.setBounds(27, 152, 109, 23);
+		contentPane.add(rbSubt);
+		
+		buttonGroup.add(rbMult);
+		rbMult.setBounds(27, 178, 109, 23);
+		contentPane.add(rbMult);
+
+		buttonGroup.add(rbDiv);
+		rbDiv.setBounds(27, 204, 109, 23);
+		contentPane.add(rbDiv);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

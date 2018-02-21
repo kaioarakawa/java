@@ -1,0 +1,13 @@
+package br.edu.ifcvideira.Lista1;
+
+import java.util.Scanner;
+
+public class Exercicio3 {
+	Scanner in = new Scanner(System.in);
+	String nome;
+	int idade;
+	double salario;
+	
+	System.
+	nome = Str
+}

@@ -1,0 +1,115 @@
+package br.edu.ifcvideira.Lista10;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JRadioButton;
+import javax.swing.JCheckBox;
+import javax.swing.ButtonGroup;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Ex1 extends JFrame {
+
+	private JPanel contentPane;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+	JCheckBox chCarregador = new JCheckBox("Carregador - R$ 200,00");
+	JCheckBox chPasta = new JCheckBox("Pasta - R$ 150,00");		
+	JCheckBox chEstabilizador = new JCheckBox("Estabilizador - R$ 150,00");		
+	JCheckBox chTeclado = new JCheckBox("Teclado - R$ 50,00");
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Ex1 frame = new Ex1();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Ex1() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lbEscolha = new JLabel("Escolha o Tipo do Computador");
+		lbEscolha.setFont(new Font("Times New Roman", Font.ITALIC, 13));
+		lbEscolha.setBounds(112, 11, 212, 24);
+		contentPane.add(lbEscolha);
+		
+		JRadioButton rbNote = new JRadioButton("Notebook");
+		rbNote.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (rbNote.isSelected()){
+					
+						chCarregador.setEnabled(true);
+						chPasta.setEnabled(true);
+						chEstabilizador.setEnabled(false);
+						chTeclado.setEnabled(false);
+						chEstabilizador.setSelected(false);
+						chTeclado.setSelected(false);
+					
+				}
+			}
+		});
+		buttonGroup.add(rbNote);
+		rbNote.setSelected(true);
+		rbNote.setBounds(39, 42, 109, 23);
+		contentPane.add(rbNote);
+		
+		JRadioButton rdDesktop = new JRadioButton("Desktop");
+		rdDesktop.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if (rdDesktop.isSelected()){
+				chCarregador.setEnabled(false);
+				chPasta.setEnabled(false);
+				chEstabilizador.setEnabled(true);
+				chTeclado.setEnabled(true);
+				chCarregador.setSelected(false);
+				chPasta.setSelected(false);
+				}
+			}
+		});
+		buttonGroup.add(rdDesktop);
+		rdDesktop.setBounds(245, 42, 109, 23);
+		contentPane.add(rdDesktop);
+		
+		
+		chCarregador.setBounds(39, 75, 169, 23);
+		contentPane.add(chCarregador);
+		
+		
+		chPasta.setBounds(39, 112, 155, 23);
+		contentPane.add(chPasta);
+		
+	
+		chEstabilizador.setBounds(245, 75, 169, 23);
+		contentPane.add(chEstabilizador);
+		
+		
+		chTeclado.setBounds(245, 112, 169, 23);
+		contentPane.add(chTeclado);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setBounds(187, 142, 46, 14);
+		contentPane.add(lblNewLabel);
+	}
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.StackOverflowError"/>
+<fullyQualifiedTypeName name="java.lang.InternalError"/>
+<fullyQualifiedTypeName name="java.io.Closeable"/>
+<fullyQualifiedTypeName name="java.lang.Deprecated"/>
+<fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSpinnerUI"/>
+<fullyQualifiedTypeName name="javax.swing.SpringLayout.Constraints"/>
+<fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.concurrent.SynchronousQueue"/>
+<fullyQualifiedTypeName name="java.io.CharArrayReader"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista6.Troca"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista7.Professor"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista7.Computador"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista9.EquipamentoSonoro"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Notebook"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Desktop"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Automovel"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Caminhao"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Moto"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Azulejoquad"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Azulejoretan"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Azulejotri"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Ex3"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Azulejotridif"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Colega_Trabalho"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Amigo"/>
+<fullyQualifiedTypeName name="br.edu.ifcvideira.Lista10.Parente"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+</qualifiedTypeNameHistroy>

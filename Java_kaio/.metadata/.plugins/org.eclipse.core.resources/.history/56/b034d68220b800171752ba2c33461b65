@@ -1,0 +1,17 @@
+package br.edu.ifcvideira.Lista10;
+
+public class Parente extends Pessoa {
+	private String parentesco;
+	
+	public void setParentesco(String parentesco) {
+		this.parentesco=parentesco;
+	}
+	
+	public String getParentesco() {
+		return parentesco;
+	}
+	
+	private String msgmail() {
+		return "Até mais. "+this.getAssmail();
+	}
+}

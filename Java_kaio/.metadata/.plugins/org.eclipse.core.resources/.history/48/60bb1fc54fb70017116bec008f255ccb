@@ -1,0 +1,41 @@
+package br.edu.ifcvideira.Lista10;
+
+public class Notebook {
+	private double carregador;
+	private double pasta;
+	private String carregadorDesc;
+	private String pastaDesc;
+	
+	public double getCarregador() {
+		return carregador;
+	}
+	
+	public void setCarregador() {
+		this.carregador= carregador;
+	}
+
+	public double getPasta() {
+		return pasta;
+	}
+
+	public void setPasta(double pasta) {
+		this.pasta = pasta;
+	}
+
+	public String getCarregadorDesc() {
+		return carregadorDesc;
+	}
+
+	public void setCarregadorDesc(String carregadorDesc) {
+		this.carregadorDesc = carregadorDesc;
+	}
+
+	public String getPastaDesc() {
+		return pastaDesc;
+	}
+
+	public void setPastaDesc(String pastaDesc) {
+		this.pastaDesc = pastaDesc;
+	}
+	
+}

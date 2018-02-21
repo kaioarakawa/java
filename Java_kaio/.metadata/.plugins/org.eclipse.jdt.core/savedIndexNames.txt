@@ -1,0 +1,4 @@
+INDEX VERSION 1.130+C:\Users\kaioa\Desktop\Java_kaio\.metadata\.plugins\org.eclipse.jdt.core
+3645029767.index
+3683611187.index
+2077361979.index
